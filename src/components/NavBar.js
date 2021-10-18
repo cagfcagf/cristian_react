@@ -1,3 +1,6 @@
+import CartWidget from "./CartWidget"
+
+
 const Navbar = () => {
   return (
     <header>
@@ -6,6 +9,7 @@ const Navbar = () => {
         <a href=''>¿Quienes somos?</a>
         <a href=''> Politicas de devoluciones</a>
         <a href=''> Comprar</a>
+        <CartWidget/>
       </nav>
 
     </header>
