@@ -2,6 +2,7 @@ import {useState} from "react"
 
 const Itemcount = (counter) => {
 
+
   const {stock:stock, initial:initial} = counter
 
   const [contador, setContador] = useState(Number(initial))

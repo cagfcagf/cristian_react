@@ -1,9 +1,15 @@
-const Itemlist = (mensaje) => {
+import Itemlist from "./ItemList"
+
+const Itemlistcontainer = () => {
 
 
   return (
-    <p>Mensaje: {mensaje.texto}</p>
+    <>
+      <Itemlist/>
+
+    </>
   )
+
 }
 
-export default Itemlist
+export default Itemlistcontainer;

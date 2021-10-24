@@ -1,8 +1,8 @@
 
 import {useState} from "react"
 import Navbar from "./components/NavBar"
-import Itemlist from  "./components/ItemListContainer"
 import Itemcount from "./components/ItemCount"
+import Itemlistcontainer from "./components/ItemListContainer"
 
 
 const App = () => {
@@ -12,6 +12,8 @@ const App = () => {
     <>
       <Navbar/>
       <Itemcount stock="5" initial="1" />
+      <Itemlistcontainer/>
+
     </>
   )
 
