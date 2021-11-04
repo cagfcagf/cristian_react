@@ -1,29 +1,15 @@
+import { NavLink } from 'react-router-dom'
 
-import {useState} from "react"
-
-const Item = (props) => {
-
-
-const promesa = new Promise((res, rej) => {
-
-  setTimeout(() => {
-    res(setProductos([props]))
-  }, 2000)
-
-})
-
-
-const [productos, setProductos] = useState([])
-
-
+const Item = () => {
 
 
   return (
     <>
-      <p></p>
-      <ul>
-        {productos.map(u => <li key={u.id}>Titulo: {u.title}, Precio: {u.price}, Url: {u.pictureUrl}</li>)}
-      </ul>
+
+    <NavLink to="/item/1">
+      <p> Item </p>
+    </NavLink>
+
 
     </>
   )

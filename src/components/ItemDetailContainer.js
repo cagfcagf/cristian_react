@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 import Itemdetail from "./ItemDetail"
+import {useParams} from "react-router-dom"
 
 const Itemdetailcontainer = () => {
 
