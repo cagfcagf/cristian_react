@@ -5,6 +5,8 @@ import Itemcount from "./components/ItemCount"
 import Itemlistcontainer from "./components/ItemListContainer"
 import Itemdetailcontainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Route } from "react-router-dom"
+import Itemlist from "./components/ItemList"
+
 
 const App = () => {
 
@@ -22,6 +24,8 @@ const App = () => {
 
 
       </BrowserRouter>
+
+
     </>
   )
 

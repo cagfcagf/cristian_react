@@ -1,22 +1,25 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Itemcount from "./ItemCount"
 
-const Item = () => {
+
+
+
+const Item = (props) => {
+
+
+
+const {id, title, price, pictureUrl} = props
 
 
   return (
     <>
-
-    <NavLink to="/item/1">
-      <p> Item </p>
-    </NavLink>
-
-
+    <div>Producto: {title}</div>
+    <div>Precio: ${price}</div>
+    <div>URL Imagen:{pictureUrl}</div>
+    <Link to={`/item/${id}`}>Ver</Link>
     </>
   )
 
 }
 
 export default Item;
-
-
-// {productos.map(u => <li>{u.id}</li>)}

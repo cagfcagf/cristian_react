@@ -1,5 +1,6 @@
 import CartWidget from "./CartWidget"
 import { NavLink } from 'react-router-dom'
+import Item from "./Item"
 
 const Navbar = () => {
   return (
@@ -9,10 +10,10 @@ const Navbar = () => {
     </NavLink>
 
       <nav>
-        <NavLink to="/categoria/1"> Categoria 1 </NavLink>
-        <NavLink to="/categoria/2"> Categoria 2 </NavLink>
-        <NavLink to="/categoria/2"> Categoria 3 </NavLink>
+        <NavLink to="/categoria/chocolates"> Chocolates </NavLink>
+        <NavLink to="/categoria/dulces"> Dulces </NavLink>
         <CartWidget/>
+
       </nav>
 
     </header>

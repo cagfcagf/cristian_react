@@ -1,15 +1,12 @@
 
 
-const Itemdetail = (producto) => {
+const Itemdetail = (productos) => {
 
+console.log(productos)
 
   return (
     <>
-
-    <p>{producto.id}</p>
-    <p>{producto.title}</p>
-    <p>{producto.price}</p>
-    <p>{producto.pictureUrl}</p>
+    <p>{productos.title}</p>
 
     </>
   )

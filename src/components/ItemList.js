@@ -1,15 +1,16 @@
 
 import Item from "./Item"
 
+
 const Itemlist = ({productos}) => {
 
 
   return (
     <>
-    <ul>
-      {productos.map(u => <li key={u.id}>Titulo: {u.title}, Precio: {u.price}, Url: {u.pictureUrl}</li>)}
-    </ul>
-    <Item />
+
+      {productos.map(u => <Item id={u.id} title={u.title} price={u.price} pictureUrl={u.pictureUrl} category={u.category}/>)}
+
+
 
     </>
   )
