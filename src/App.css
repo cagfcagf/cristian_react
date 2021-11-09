@@ -1,3 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
 body {
-  background-color: red;
+  font-family: 'Dongle', sans-serif!important;
+  font-size: 30px!important;
+  line-height: 0!important;
+  margin: 0!important;
+}
+
+
+header img {
+  height: 80px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+
+header nav a {
+  font-weight: 100;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header nav a {
+  color: #000433;
+}
+
+header nav a:hover {
+  color: #FF3155;
+}
+
+header nav span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.product-container {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-container p{
+  margin-bottom: 1.5rem;
+}
+
+.product-container img {
+  width: 100%;
+}
+
+.product-container-all {
+  display: flex;
+}
+
+.product-details {
+  display: flex;
+  padding: 20px 80px;
+}
+
+.product-details img{
+  width: 50%;
+}
+
+.product-details-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-details-text h2 {
+  font-size: 80px;
+  margin: 0;
+}
+
+
+.product-details-price {
+  margin-top: 30px;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.counter {
+  display: flex;
+  margin-top: 20px;
+
+}
+
+
+.counter button {
+  height: 50px;
+  border: 0;
+  background-color: #FF3155;
+  color: white;
+  border-radius: 5%;
+  margin: 10px 5px;
+}
+
+.counter p {
+  margin: auto 15px;
+
 }

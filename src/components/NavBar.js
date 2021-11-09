@@ -5,15 +5,14 @@ import Item from "./Item"
 const Navbar = () => {
   return (
     <header>
-    <NavLink to="/">
-      <img src="/logo.png" alt="logo" />
-    </NavLink>
+      <NavLink to="/">
+        <img src="/logo.png" alt="logo" />
+      </NavLink>
 
       <nav>
         <NavLink to="/categoria/chocolates"> Chocolates </NavLink>
         <NavLink to="/categoria/dulces"> Dulces </NavLink>
         <CartWidget/>
-
       </nav>
 
     </header>

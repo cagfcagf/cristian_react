@@ -1,9 +1,11 @@
 import {useState} from "react"
+import { Link } from 'react-router-dom'
 
-const Itemcount = (counter) => {
+const Itemcount = ({onClick}) => {
 
 
-  const {stock:stock, initial:initial} = counter
+  const stock = 5
+  const initial = 1
 
   const [contador, setContador] = useState(Number(initial))
   const sumarContador = () => {
@@ -29,11 +31,12 @@ const Itemcount = (counter) => {
   return (
     <>
 
-      <button onClick={sumarContador} >Aumentar</button>
-      <p>El contador es: {contador}</p>
-      <button onClick={restarContador} >Disminuir</button>
-
-      <button>Agregar al carrito</button>
+      <button onClick={sumarContador} >+</button>
+      <p>{contador}</p>
+      <button onClick={restarContador} >-</button>
+      <Link to="/Cart">
+        <button onClick={ () => onClick(contador)}>Agregar al carrito</button>
+      </Link>
 
     </>
   )

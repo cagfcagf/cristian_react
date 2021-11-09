@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Itemcount from "./ItemCount"
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
 
 
 
@@ -13,10 +15,13 @@ const {id, title, price, pictureUrl} = props
 
   return (
     <>
-    <div>Producto: {title}</div>
-    <div>Precio: ${price}</div>
-    <div>URL Imagen:{pictureUrl}</div>
-    <Link to={`/item/${id}`}>Ver</Link>
+
+    <Col xs="3" className="product-container">
+      <img src={pictureUrl} alt="imagen producto"/>
+      <p>{title}</p>
+      <p>${price}</p>
+      <Link to={`/item/${id}`}>Ver</Link>
+    </Col>
     </>
   )
 

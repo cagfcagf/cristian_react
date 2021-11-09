@@ -5,10 +5,10 @@ import Item from "./Item"
 
 
 const products_base = [
-  { id: 1, title: "Chocolate Lover", price: 17990, pictureUrl:"http://www", category:"dulces"},
-  { id: 2, title: "Happy Rainbow", price: 17990, pictureUrl:"http://www", category:"chocolates"},
-  { id: 3, title: "Yummy Gummies", price: 17990, pictureUrl:"http://www", category:"dulces"},
-  { id: 4, title: "Sweet Love", price: 17990, pictureUrl:"http://www", category:"chocolates"},
+  { id: 1, title: "Chocolate Lover", price: 17990, pictureUrl:"../media/chocolate.jpg", category:"dulces"},
+  { id: 2, title: "Happy Rainbow", price: 17990, pictureUrl:"../media/happy.jpg", category:"chocolates"},
+  { id: 3, title: "Yummy Gummies", price: 17990, pictureUrl:"../media/yummy.jpg", category:"dulces"},
+  { id: 4, title: "Sweet Love", price: 17990, pictureUrl:"../media/sweet.jpg", category:"chocolates"},
 ]
 
 const Itemlistcontainer = () => {
@@ -43,8 +43,9 @@ if (id === undefined) {
 
   return (
     <>
-    <Itemlist productos={productos}/>
-
+    <div className="product-container-all">
+      <Itemlist productos={productos}/>
+    </div>
     </>
   )
 
