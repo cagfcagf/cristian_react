@@ -7,6 +7,7 @@ import Itemdetailcontainer from "./components/ItemDetailContainer"
 import { BrowserRouter, Route } from "react-router-dom"
 import Itemlist from "./components/ItemList"
 import Cart from "./components/Cart"
+import CustomComponent from "./components/CartContext"
 
 const App = () => {
 
@@ -14,16 +15,13 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Navbar/>
-
-        <Route path="/" component={Itemlistcontainer} exact />
-        <Route path="/categoria/:id" component={Itemlistcontainer}/>
-        <Route path="/item/:id" component={Itemdetailcontainer}/>
-        <Route path="/cart" component={Cart}/>
-
-
-
-
+        <CustomComponent>
+            <Navbar/>
+            <Route path="/" component={Itemlistcontainer} exact />
+            <Route path="/categoria/:id" component={Itemlistcontainer}/>
+            <Route path="/item/:id" component={Itemdetailcontainer}/>
+            <Route path="/cart" component={Cart}/>
+        </CustomComponent>
       </BrowserRouter>
 
 

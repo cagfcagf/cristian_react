@@ -1,8 +1,12 @@
 import CartWidget from "./CartWidget"
 import { NavLink } from 'react-router-dom'
 import Item from "./Item"
+import {useContext} from "react"
+import {contexto} from "./CartContext"
 
 const Navbar = () => {
+
+
   return (
     <header>
       <NavLink to="/">
@@ -12,7 +16,7 @@ const Navbar = () => {
       <nav>
         <NavLink to="/categoria/chocolates"> Chocolates </NavLink>
         <NavLink to="/categoria/dulces"> Dulces </NavLink>
-        <CartWidget/>
+        <CartWidget />
       </nav>
 
     </header>

@@ -1,11 +1,15 @@
 import Itemcount from "./ItemCount"
+import {useContext} from "react"
+import {contexto} from "./CartContext"
 
 
 
 const Itemdetail = (productos) => {
 
-const stateUpCount = (dataDelHijo) => {
-  console.log("Hemos recibido la data del hijo:" + dataDelHijo)
+const {agregarProducto} = useContext(contexto)
+
+const stateUpCount = (cantidad) => {
+  agregarProducto(cantidad, productos)
 }
 
   return (
