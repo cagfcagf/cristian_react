@@ -2,6 +2,7 @@ import Itemlist from "./ItemList"
 import {useState} from "react"
 import {useParams} from "react-router-dom"
 import Item from "./Item"
+import { firestore} from "../firebase"
 
 
 const products_base = [
@@ -17,28 +18,32 @@ const [productos, setProductos] = useState([])
 const {id} = useParams()
 
 
-const productos_filtrados = products_base.filter(filtrado => filtrado.category == id)
 
 
+const db = firestore
+const collection = db.collection("productos")
+const promesa = collection.get()
 
+promesa.then ( (base) => {
 
-const promesa = new Promise((res, rej) => {
+  if (id === undefined) {
 
-if (id === undefined) {
+    const base_completa = base.docs.map(doc => doc.data())
 
-  setTimeout(() => {
-    res(setProductos(products_base))
-  }, 2000)
+    setProductos(base_completa)  
+  
+  } else {
+      const base_completa = base.docs.map(doc => doc.data())
+      const productos_filtrados = base_completa.filter(filtrado => filtrado.category == id)
+      setProductos(productos_filtrados)  
 
-} else {
-  setTimeout(() => {
-    res(setProductos(productos_filtrados))
-  }, 2000)
-}
-
+  }
 
 
 })
+
+
+
 
 
   return (
