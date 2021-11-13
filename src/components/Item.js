@@ -20,7 +20,7 @@ const {id, title, price, pictureUrl} = props
       <img src={pictureUrl} alt="imagen producto"/>
       <p>{title}</p>
       <p>${price}</p>
-      <Link to={`/item/${id}`}>Ver</Link>
+      <Link to={`/item/${id}`} className="ver-mas">Ver</Link>
     </Col>
     </>
   )

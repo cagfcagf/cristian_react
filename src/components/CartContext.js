@@ -10,15 +10,37 @@ const CustomComponent   = ({children}) => {
 
   const agregarProducto = (cantidad, productos) => {
 
-    if (!isInCart(productos.title)) {
-      setCart([...cart, {cantidad, productos} ])
-    }
+    const found = cart.findIndex(element => element.productos.title == productos.title);
+  
 
-    console.log(cart)
+
+    if (found == -1) {
+      setCart([...cart, {cantidad, productos} ])
+    } else {
+      const nueva_cantidad = cart[found].cantidad + cantidad
+      
+      cart.splice(found,1)
+ 
+
+
+      setCart([...cart, {cantidad: nueva_cantidad, productos} ])
+      
+
+    } 
+
+    
 
   }
 
-  const borrarProducto = () => {
+  
+
+  const borrarProducto = (e) => {
+    
+    const found = e.target.id
+    cart.splice(found,1)
+    
+    setCart([...cart])
+ 
 
   }
 
@@ -26,17 +48,7 @@ const CustomComponent   = ({children}) => {
     setCart([])
   }
 
-  const isInCart = (venta) => {
 
-    const found = cart.find(element => element.productos.title == venta);
-
-    if (found == undefined) {
-      return false
-    } else {
-      return true
-    }
-
-  }
 
 
   const valorDelContexto = {

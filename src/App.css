@@ -108,7 +108,124 @@ header nav span {
   margin: 10px 5px;
 }
 
+.counter button:hover {
+ 
+  background-color: white;
+  color: #FF3155 ;
+  border: #FF3155 solid 1px;
+}
+
+
 .counter p {
   margin: auto 15px;
+
+}
+
+.listado {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listado img {
+  height: 60px;
+  margin: 15px 10px;
+}
+
+.listado p {
+  margin: 0;
+}
+
+.carro-vacio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.carro-vacio button {
+  height: 50px;
+  border: 0;
+  background-color: #FF3155;
+  color: white;
+  border-radius: 5%;
+  margin: 10px 5px;
+}
+
+.button-vaciar {
+  height: 50px;
+  border: 0;
+  background-color: #FF3155;
+  color: white;
+  border-radius: 5%;
+  margin: 100px 10px;
+}
+
+.button-small {
+  font-size: 1rem;
+  height: 1.5rem;
+  border: 0;
+  background-color: #FF3155;
+  color: white;
+  border-radius: 5%;
+  margin: 10px 5px;
+}
+
+.button-small:hover {
+ 
+  background-color: white;
+  color: #FF3155 ;
+  border: #FF3155 solid 1px;
+}
+
+.total-cart {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.ver-mas {
+  text-decoration: none;
+  color: #FF3155 ;
+  border: 1px solid #FF3155 ;
+  padding: 15px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+
+
+
+.ver-mas:hover {
+  color: white;
+  background-color: #FF3155;
+}
+
+.cart-widget {
+  display: flex;
+
+}
+
+
+.cart-widget p {
+  margin-left: -10px;
+  
+}
+
+.go-cart {
+  height: 50px;
+  border: 0;
+  background-color: #FF3155;
+  color: white;
+  border-radius: 5%;
+  margin: 100px 10px;
+}
+
+.go-cart:hover {
+ 
+  background-color: white;
+  color: #FF3155 ;
+  border: #FF3155 solid 1px;
 
 }

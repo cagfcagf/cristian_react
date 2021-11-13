@@ -30,13 +30,12 @@ const Itemcount = ({onClick}) => {
 
   return (
     <>
-
-      <button onClick={sumarContador} >+</button>
-      <p>{contador}</p>
       <button onClick={restarContador} >-</button>
-      <Link to="/Cart">
+      <p>{contador}</p>
+      <button onClick={sumarContador} >+</button>
+      
         <button onClick={ () => onClick(contador)}>Agregar al carrito</button>
-      </Link>
+      
 
     </>
   )
