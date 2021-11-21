@@ -38,7 +38,7 @@ const Itemdetailcontainer = () => {
 
         pictureUrl={productos.pictureUrl}
 
-        details={productos.details}
+        description={productos.description}
 
       />
 

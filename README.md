@@ -31,5 +31,9 @@ CartWidget: es el componente que muestra el carrito de compras y su lógica.
 
 ## Imagenes del proyecto
 
-![plot](./public/media/chocolate.jpg)
+![plot](./public/media/app1.png)
+![plot](./public/media/app2.png)
+![plot](./public/media/app3.png)
+![plot](./public/media/app4.png)
+![plot](./public/media/app5.png)
 

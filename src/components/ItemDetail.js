@@ -29,7 +29,7 @@ const stateUpCount = (cantidad) => {
       <img src={productos.pictureUrl} alt="imagen producto"/>
         <div className="product-details-text">
           <h2>{productos.title}</h2>
-          <p className="product-details-details">{productos.details}</p>
+          <p className="product-details-details">{productos.description}</p>
           <p className="product-details-price">${productos.price}</p>
           <div className="counter">
             <Itemcount onClick={stateUpCount} />
