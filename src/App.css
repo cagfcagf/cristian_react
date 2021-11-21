@@ -159,7 +159,17 @@ header nav span {
   background-color: #FF3155;
   color: white;
   border-radius: 5%;
-  margin: 100px 10px;
+  margin: 50px 10px;
+}
+
+.button-finish {
+  height: 50px;
+  border: 0;
+  background-color: #FF3155;
+  color: white;
+  border-radius: 5%;
+  margin: 20px 10px;
+  
 }
 
 .button-small {
@@ -229,3 +239,10 @@ header nav span {
   border: #FF3155 solid 1px;
 
 }
+
+.pedido-realizado {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 2rem;
+}
+

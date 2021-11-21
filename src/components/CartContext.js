@@ -8,6 +8,12 @@ const CustomComponent   = ({children}) => {
 
   const [cart, setCart] = useState([])
 
+  const [purchase, setPurchase] = useState("")
+
+  const purchaseid = (id_compra) => {
+    setPurchase(id_compra)
+  } 
+
   const agregarProducto = (cantidad, productos) => {
 
     const found = cart.findIndex(element => element.productos.title == productos.title);
@@ -55,8 +61,13 @@ const CustomComponent   = ({children}) => {
     cart: cart,
     agregarProducto: agregarProducto,
     borrarProducto: borrarProducto,
-    vaciar: vaciar
+    vaciar: vaciar,
+    purchaseid: purchaseid,
+    purchase: purchase,
+
   }
+
+  
 
   return (
     <Provider value={valorDelContexto}>

@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Tienda GuiltyBox con React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue realizado en base a React JS [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Librerias
 
-In the project directory, you can run:
+## Boostrap 5
 
-### `npm start`
+Usaremos Boostrap para generar estructuras de diseño de manera simple, ya que no son el foco principal de este proyecto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Firebase
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Trabajaremos con Firebase para almacenar nuestra base de productos y registrar los pedidos.
 
-### `npm test`
+# Documentación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Flujo de compra
+Cada cliente ingresará al home donde verá todos los productos. Podrá navegar por las diferentes categorías y luego elegir uno o varios productos para comprar. Al comprar podrá elegir las cantidades de el producto. Una vez que finaliza la compra, el sistema generará un id de pedido.
 
-### `npm run build`
+## Componentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+APP.JS: Incluye el rendering de toda la aplicación.
+ItemListContainer: Trae todos los productos de la base de datos y genera todas las logicas de los productos que se deben mostrar, de acuerdo a las selecciones el cliente.
+ItelList: genera un listado de todos los productos a mostrar.
+Item: son los productos a mostrar en el catálogo.
+ItemDetailContainer: Trae todos los productos de la base de datos y genera todas las logica del producto que se va a mostrar en detalle, cuando el cliente ingresa al producto a comprar.
+ItemDetail: maneja la estructura del producto a mostrar en detalle.
+Cart: se encarga de toda la logica del carro de compras y la venta final.
+CartContext: es el context que usaremos para transmitir información de un componente a otro.
+CartWidget: es el componente que muestra el carrito de compras y su lógica.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Imagenes del proyecto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![plot](./public/media/chocolate.jpg)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

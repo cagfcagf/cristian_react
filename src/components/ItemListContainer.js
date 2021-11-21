@@ -5,12 +5,7 @@ import Item from "./Item"
 import { firestore} from "../firebase"
 
 
-const products_base = [
-  { id: 1, title: "Chocolate Lover", price: 17990, pictureUrl:"../media/chocolate.jpg", category:"dulces"},
-  { id: 2, title: "Happy Rainbow", price: 17990, pictureUrl:"../media/happy.jpg", category:"chocolates"},
-  { id: 3, title: "Yummy Gummies", price: 17990, pictureUrl:"../media/yummy.jpg", category:"dulces"},
-  { id: 4, title: "Sweet Love", price: 17990, pictureUrl:"../media/sweet.jpg", category:"chocolates"},
-]
+
 
 const Itemlistcontainer = () => {
 
@@ -24,23 +19,46 @@ const db = firestore
 const collection = db.collection("productos")
 const promesa = collection.get()
 
+
+
+if (id === undefined) {
+
 promesa.then ( (base) => {
 
-  if (id === undefined) {
 
-    const base_completa = base.docs.map(doc => doc.data())
+
+
+    const base_completa = base.docs.map(doc => ({...doc.data(), id: doc.id}))
+   
+    setProductos(base_completa)  
+  
+ 
+
+
+})   } else {
+  
+  const filtrados = collection.where("category", "==", id)
+  const promesa_filtrados = filtrados.get()
+
+  promesa_filtrados.then ( (base) => {
+
+
+    
+
+    const base_completa = base.docs.map(doc => ({...doc.data(), id: doc.id}))
+  
 
     setProductos(base_completa)  
   
-  } else {
-      const base_completa = base.docs.map(doc => doc.data())
-      const productos_filtrados = base_completa.filter(filtrado => filtrado.category == id)
-      setProductos(productos_filtrados)  
-
-  }
+ 
 
 
-})
+}) 
+
+
+
+  
+}
 
 
 

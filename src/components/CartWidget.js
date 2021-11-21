@@ -18,7 +18,7 @@ const CartWidget = () => {
   return (
     <>
     {!(sum == 0) && 
-    <div className="cart-widget">
+    <div className="cart-widget" id="cart">
       <Link to="/Cart">
         <span class="material-icons">
       shopping_cart

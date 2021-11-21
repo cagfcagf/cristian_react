@@ -6,6 +6,7 @@ import {contexto} from "./CartContext"
 
 const Navbar = () => {
 
+  const {purchase} = useContext(contexto)
 
   return (
     <header>
@@ -16,7 +17,7 @@ const Navbar = () => {
       <nav>
         <NavLink to="/categoria/chocolates"> Chocolates </NavLink>
         <NavLink to="/categoria/dulces"> Dulces </NavLink>
-        <CartWidget />
+        { !(purchase)  && <CartWidget />}
       </nav>
 
     </header>
